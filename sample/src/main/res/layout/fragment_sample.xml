@@ -8,9 +8,10 @@
         android:id="@+id/position"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
         android:textColor="@color/black"
-        android:textSize="100dp"
+        android:textSize="80dp"
         tools:text="1" />
 
 </FrameLayout>

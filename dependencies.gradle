@@ -1,0 +1,39 @@
+ext {
+    // Build SDK version
+    buildToolsVersion = '25.0.0'
+    compileSdkVersion = 26
+    targetSdkVersion = 26
+    minSdkVersion = 14
+
+    versionCode = 1
+    libraryVersionName = '1.0.1'
+
+    // Bintray setting info
+    repositoryName = 'SimpleIndicator'
+    packageName = 'pm10.kr'
+
+    description = 'PM10-SimpleIndicator'
+
+    websiteUrl = 'https://github.com/PM-10/SimpleIndicator' // site url
+    gitHubRepoUrl = 'https://github.com/PM-10/SimpleIndicator.git' // git repo url
+
+    githubRepo = 'PM-10/SimpleIndicator'
+    githubReleaseNotesFile = 'RELEASENOTE.md'
+
+
+    // Dependencies version
+    supportLibraryVersion = '26.+'
+
+//    // Testing-only
+//    junitLibVersion = '4.12'
+//    espressoLibVersion = '2.2.2'
+
+
+    // Support library Dependencies
+    appCompat = "com.android.support:appcompat-v7:$rootProject.ext.supportLibraryVersion"
+
+    // Testing-only dependencies
+//    junit = "junit:junit:$rootProject.ext.junitLibVersion"
+
+//    espressoCore = "com.android.support.test.espresso:espresso-core:$rootProject.ext.espressoLibVersion"
+}

@@ -6,17 +6,17 @@ import android.util.DisplayMetrics;
 import android.view.WindowManager;
 
 public class PixelUtils {
-    public static float dpToPx(Context context, float dp) {
+    public static int dpToPx(Context context, float dp) {
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
-        float px = dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        int px = (int) (dp * (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
         return px;
     }
 
-    public static float pxToDp(Context context, float px) {
+    public static int pxToDp(Context context, float px) {
         Resources resources = context.getResources();
         DisplayMetrics metrics = resources.getDisplayMetrics();
-        float dp = px / (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT);
+        int dp = (int) (px / (metrics.densityDpi / DisplayMetrics.DENSITY_DEFAULT));
         return dp;
     }
 

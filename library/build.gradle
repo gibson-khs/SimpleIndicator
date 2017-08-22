@@ -1,16 +1,103 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.github.dcendents.android-maven'
+apply plugin: 'com.jfrog.bintray'
+
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+
+group = rootProject.ext.packageName
+version = rootProject.ext.libraryVersionName
+
+// Local aar info
+install {
+    repositories.mavenInstaller {
+        pom.project {
+            name project.name
+            description rootProject.ext.description
+            url rootProject.ext.websiteUrl
+            inceptionYear '2017' // release date
+
+            packaging 'aar'
+            groupId rootProject.ext.packageName
+            artifactId 'simpleindicator'
+            version rootProject.ext.libraryVersionName
+
+            licenses {
+                license {
+                    name 'The Apache Software License, Version 2.0'
+                    url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    distribution 'repo'
+                }
+            }
+
+            scm { // Optional setting
+                connection rootProject.ext.gitHubRepoUrl
+                developerConnection rootProject.ext.gitHubRepoUrl
+                url rootProject.ext.websiteUrl
+            }
+
+            developers { // Optional setting
+                developer {
+                    id 'PM10'
+                    name 'PM10'
+                    email 'show9114@gmail.com'
+                }
+            }
+        }
+    }
+}
+
+
+bintray {
+    user = properties.get('user')
+    key = properties.get("key")
+
+    configurations = ['archives']
+
+    publish = true
+
+    pkg {
+        repo = rootProject.ext.repositoryName
+        name = 'SimpleIndicator'
+        userOrg = user
+        // An optional organization name when the repo belongs to one of the user's orgs
+        desc = 'ViewPager SimpleIndicator' // Optional
+        licenses = ['Apache-2.0']
+
+        vcsUrl = rootProject.ext.gitHubRepoUrl
+        websiteUrl = rootProject.ext.websiteUrl
+        // issueTrackerUrl = '' // Optional
+
+        labels = ['aar', 'android', 'indicator'] // Optional
+        publicDownloadNumbers = true
+
+        githubRepo = rootProject.ext.githubRepo // Optional Github repository
+        githubReleaseNotesFile = rootProject.ext.githubReleaseNotesFile
+        // Optional Github readme file
+
+        version {
+            name = rootProject.ext.libraryVersionName // The name of your library project
+            desc = rootProject.ext.description // Optional - Version-specific description'
+            released = new Date()
+            // Optional - Date of the version release. 2 possible values: date in the format of 'yyyy-MM-dd'T'HH:mm:ss.SSSZZ' OR a java.util.Date instance
+            vcsTag = rootProject.ext.libraryVersionName
+        }
+    }
+}
+// Bintray setting end
+
 
 android {
-    compileSdkVersion 26
-    buildToolsVersion "26.0.1"
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        minSdkVersion 18
-        targetSdkVersion 26
-        versionCode 1
-        versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.libraryVersionName
 
     }
     buildTypes {
@@ -23,9 +110,33 @@ android {
 
 dependencies {
     compile fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    compile 'com.android.support:appcompat-v7:26.+'
-    testCompile 'junit:junit:4.12'
+
+    compile rootProject.ext.appCompat
+}
+
+// JCenter publish
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+// Optional docs
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+// Optional javadoc
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+
+artifacts {
+//    archives javadocJar // Optional
+    archives sourcesJar
+}
+
+task findConventions << {
+    println project.getConvention()
 }

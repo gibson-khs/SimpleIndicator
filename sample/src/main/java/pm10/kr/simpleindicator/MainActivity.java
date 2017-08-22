@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
 import pm10.kr.library.CircleIndicator;
+import pm10.kr.library.LineIndicator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -20,7 +21,10 @@ public class MainActivity extends AppCompatActivity {
         ViewPager viewPager = (ViewPager) findViewById(R.id.pager);
         viewPager.setAdapter(new SamplePagerAdapter(getSupportFragmentManager()));
 
-        CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.indicator);
+        LineIndicator lineIndicator = (LineIndicator) findViewById(R.id.line_indicator);
+        lineIndicator.setupWithViewPager(viewPager);
+
+        CircleIndicator circleIndicator = (CircleIndicator) findViewById(R.id.circle_indicator);
         circleIndicator.setupWithViewPager(viewPager);
     }
 }
