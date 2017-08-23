@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="IndicatorBase">
+        <attr name="defaultColor" format="color" />
+        <attr name="selectedColor" format="color" />
+        <attr name="strokeColor" format="color" />
+        <attr name="radius" format="dimension" />
+        <attr name="lineWidth" format="dimension" />
+        <attr name="lineHeight" format="dimension" />
+        <attr name="strokeWidth" format="dimension" />
+        <attr name="gap" format="dimension" />
+    </declare-styleable>
+</resources>

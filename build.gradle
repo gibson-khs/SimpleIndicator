@@ -1,0 +1,30 @@
+apply from: 'dependencies.gradle'
+
+buildscript {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url  "http://dl.bintray.com/pm-10/SimpleIndicator"
+        }
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:2.3.3'
+        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5'
+        classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7.3'
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+        maven {
+            url  "http://dl.bintray.com/pm-10/SimpleIndicator"
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
