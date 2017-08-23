@@ -1,11 +1,12 @@
-package pm10.kr.simpleindicator;
+package com.pm10.simpleindicator;
 
+import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
-import pm10.kr.library.CircleIndicator;
-import pm10.kr.library.LineIndicator;
+import com.pm10.library.CircleIndicator;
+import com.pm10.library.LineIndicator;
+
 
 public class MainActivity extends AppCompatActivity {
 

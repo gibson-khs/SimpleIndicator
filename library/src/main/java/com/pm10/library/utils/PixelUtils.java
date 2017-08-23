@@ -1,4 +1,4 @@
-package pm10.kr.library.utils;
+package com.pm10.library.utils;
 
 import android.content.Context;
 import android.content.res.Resources;

@@ -4,7 +4,7 @@ android {
     compileSdkVersion 26
     buildToolsVersion "26.0.1"
     defaultConfig {
-        applicationId "pm10.kr.simpleindicator"
+        applicationId "com.pm10.simpleindicator"
         minSdkVersion 18
         targetSdkVersion 26
         versionCode 1

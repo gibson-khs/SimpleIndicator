@@ -1,4 +1,4 @@
-package pm10.kr.simpleindicator;
+package com.pm10.simpleindicator;
 
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;

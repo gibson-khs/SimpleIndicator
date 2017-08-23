@@ -1,4 +1,4 @@
-package pm10.kr.simpleindicator;
+package com.pm10.simpleindicator;
 
 import org.junit.Test;
 

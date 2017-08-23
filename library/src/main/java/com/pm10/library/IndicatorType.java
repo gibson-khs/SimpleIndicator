@@ -1,4 +1,4 @@
-package pm10.kr.library;
+package com.pm10.library;
 
 public enum IndicatorType {
     LINE, CIRCLE

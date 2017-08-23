@@ -1,4 +1,4 @@
-package pm10.kr.library;
+package com.pm10.library;
 
 import android.content.Context;
 import android.graphics.Canvas;

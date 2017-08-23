@@ -10,7 +10,7 @@ ext {
 
     // Bintray setting info
     repositoryName = 'SimpleIndicator'
-    packageName = 'pm10.kr'
+    packageName = 'com.pm10'
 
     description = 'PM10-SimpleIndicator'
 

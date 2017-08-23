@@ -1,4 +1,4 @@
-package pm10.kr.simpleindicator;
+package com.pm10.simpleindicator;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

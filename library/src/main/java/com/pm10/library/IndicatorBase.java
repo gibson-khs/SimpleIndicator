@@ -1,4 +1,4 @@
-package pm10.kr.library;
+package com.pm10.library;
 
 import android.content.Context;
 import android.content.res.TypedArray;
@@ -9,7 +9,7 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.view.ViewGroup;
 
-import pm10.kr.library.utils.PixelUtils;
+import com.pm10.library.utils.PixelUtils;
 
 public abstract class IndicatorBase extends View {
 
