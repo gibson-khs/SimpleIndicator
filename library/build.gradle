@@ -3,10 +3,6 @@ apply plugin: 'com.github.dcendents.android-maven'
 apply plugin: 'com.jfrog.bintray'
 
 
-Properties properties = new Properties()
-properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
-
 group = rootProject.ext.packageName
 version = rootProject.ext.libraryVersionName
 
@@ -21,7 +17,7 @@ install {
 
             packaging 'aar'
             groupId rootProject.ext.packageName
-            artifactId 'simpleindicator'
+            artifactId 'simple-indicator'
             version rootProject.ext.libraryVersionName
 
             licenses {
@@ -49,6 +45,8 @@ install {
     }
 }
 
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
 
 bintray {
     user = properties.get('user')
@@ -59,8 +57,8 @@ bintray {
     publish = true
 
     pkg {
-        repo = rootProject.ext.repositoryName
-        name = 'SimpleIndicator'
+        repo = 'SimpleIndicator'
+        name = 'simple-indicator'
         userOrg = user
         // An optional organization name when the repo belongs to one of the user's orgs
         desc = 'ViewPager SimpleIndicator' // Optional
@@ -70,7 +68,6 @@ bintray {
         websiteUrl = rootProject.ext.websiteUrl
         // issueTrackerUrl = '' // Optional
 
-        labels = ['aar', 'android', 'indicator'] // Optional
         publicDownloadNumbers = true
 
         githubRepo = rootProject.ext.githubRepo // Optional Github repository
