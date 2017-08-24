@@ -17,7 +17,7 @@ install {
 
             packaging 'aar'
             groupId rootProject.ext.packageName
-            artifactId 'simple-indicator'
+            artifactId project.name
             version rootProject.ext.libraryVersionName
 
             licenses {
