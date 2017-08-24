@@ -14,14 +14,14 @@ maven
   <dependency>
   <groupId>com.pm10</groupId>
   <artifactId>indicator</artifactId>
-  <version>1.0.1</version>
+  <version>1.0.2</version>
   <type>pom</type>
   </dependency>
 ```
 
 gradle
 ```
-compile 'com.pm10:indicator:1.0.1'
+compile 'com.pm10:indicator:1.0.2'
 ```
 
 
@@ -32,13 +32,13 @@ Line Indicator
             android:id="@+id/line_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:gap="4dp"
-            app:lineHeight="6dp"
-            app:lineWidth="12dp"
-            app:strokeWidth="1dp"
-            app:defaultColor="@color/white"
-            app:selectedColor="@color/gray"
-            app:strokeColor="@color/gray" />
+            app:p_gap="4dp"
+            app:p_lineHeight="6dp"
+            app:p_lineWidth="12dp"
+            app:p_strokeWidth="1dp"
+            app:p_defaultColor="@color/white"
+            app:p_selectedColor="@color/gray"
+            app:p_strokeColor="@color/gray" />
 ```
 
 Circle Indicator
@@ -47,12 +47,12 @@ Circle Indicator
             android:id="@+id/circle_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:gap="4dp"
-            app:radius="4dp"
-            app:strokeWidth="1dp"
-            app:defaultColor="@color/white"
-            app:selectedColor="@color/gray"
-            app:strokeColor="@color/gray"/>
+            app:p_gap="4dp"
+            app:p_radius="4dp"
+            app:p_strokeWidth="1dp"
+            app:p_defaultColor="@color/white"
+            app:p_selectedColor="@color/gray"
+            app:p_strokeColor="@color/gray"/>
 ```
 
 setUpViewPager

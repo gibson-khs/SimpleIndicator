@@ -69,14 +69,14 @@ public abstract class IndicatorBase extends View {
 
 
         TypedArray typedArray = context.obtainStyledAttributes(attrs, R.styleable.IndicatorBase);
-        defaultColor = typedArray.getColor(R.styleable.IndicatorBase_defaultColor, defaultColor);
-        selectedColor = typedArray.getColor(R.styleable.IndicatorBase_selectedColor, selectedColor);
-        strokeColor = typedArray.getColor(R.styleable.IndicatorBase_strokeColor, strokeColor);
-        radius = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_radius, radius);
-        lineWidth = typedArray.getDimensionPixelOffset(R.styleable.IndicatorBase_lineWidth, lineWidth);
-        lineHeight = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_lineHeight, lineHeight);
-        strokeWidth = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_strokeWidth, strokeWidth);
-        gap = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_gap, gap);
+        defaultColor = typedArray.getColor(R.styleable.IndicatorBase_p_defaultColor, defaultColor);
+        selectedColor = typedArray.getColor(R.styleable.IndicatorBase_p_selectedColor, selectedColor);
+        strokeColor = typedArray.getColor(R.styleable.IndicatorBase_p_strokeColor, strokeColor);
+        radius = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_p_radius, radius);
+        lineWidth = typedArray.getDimensionPixelOffset(R.styleable.IndicatorBase_p_lineWidth, lineWidth);
+        lineHeight = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_p_lineHeight, lineHeight);
+        strokeWidth = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_p_strokeWidth, strokeWidth);
+        gap = typedArray.getDimensionPixelSize(R.styleable.IndicatorBase_p_gap, gap);
     }
 
     protected abstract IndicatorType getType();

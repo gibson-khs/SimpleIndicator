@@ -2,13 +2,13 @@
 <resources>
 
     <declare-styleable name="IndicatorBase">
-        <attr name="defaultColor" format="color" />
-        <attr name="selectedColor" format="color" />
-        <attr name="strokeColor" format="color" />
-        <attr name="radius" format="dimension" />
-        <attr name="lineWidth" format="dimension" />
-        <attr name="lineHeight" format="dimension" />
-        <attr name="strokeWidth" format="dimension" />
-        <attr name="gap" format="dimension" />
+        <attr name="p_defaultColor" format="color" />
+        <attr name="p_selectedColor" format="color" />
+        <attr name="p_strokeColor" format="color" />
+        <attr name="p_radius" format="dimension" />
+        <attr name="p_lineWidth" format="dimension" />
+        <attr name="p_lineHeight" format="dimension" />
+        <attr name="p_strokeWidth" format="dimension" />
+        <attr name="p_gap" format="dimension" />
     </declare-styleable>
 </resources>
